@@ -4,8 +4,9 @@
 <div class="demo hidden">Hello =) </div>
 <div class="demo hidden">I'm programer & security researcher</div>
 <div class="demo hidden">Contact me: contact.atmoner@gmail.com</div>
-<div class="demo hidden">PGP Key: https://raw.githubusercontent.com/atmoner/atmoner.github.io/master/pgp.asc</div>
- 
+<div class="demo hidden">PGP Key: </div>
+<p class="final"><a href="https://raw.githubusercontent.com/atmoner/atmoner.github.io/master/pgp.asc">Download</a></p>
+
 
 </div>
  
@@ -21,6 +22,10 @@
         font-size: 15pt;
         color: green;
     }
+    .final {
+        font-size: 15pt;
+        color: green;
+    }
     .demo2-text {
         font-size: 15pt;
         font-family: monospace;
@@ -32,7 +37,11 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
-    $('.demo').typewrite({         
+	$("p").hide();
+    $('.demo').typewrite({        
+       'callback': function(){
+            $("p").show();
+        },
         'delay': 50
     });
  
